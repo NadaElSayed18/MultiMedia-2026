@@ -1,0 +1,28 @@
+# Mohamed Khaled Mokhtar
+# section 8
+##################### TASK 4 ##########################
+def remove_from_list():
+    My_list=['Apple','Banana','Cherry','Data']
+    item=input("Enter your item you wanna remove: ")
+    if item in My_list:
+        My_list.remove(item)
+        print("The proccess is successful")
+        print("The list after Update",My_list)
+    else:
+        print("The item was not found")    
+remove_from_list()       
+
+################################### TASK 5 #################################
+
+def calculate_factorial():
+    N = int(input("Enter your factorial number: "))
+    result = 0!=1
+    
+    if N >= 0:
+        for i in range(1, N + 1):
+            result *= i
+        print(f"Factorial of {N} is: {result}")
+    else:
+        print("Sorry, factorial numbers are only positive")
+
+calculate_factorial()
