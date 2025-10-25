@@ -1,0 +1,43 @@
+# 5- Task Calculate Factorial
+def calculate_factorial():
+    N = int(input("Enter positive number: "))
+    result = 1
+    for i in range(1, N+1):
+        result = result * i
+    print(f"Factorial of {N} is: {result}")
+
+calculate_factorial()
+# output:)
+'''
+Enter positive number: 5
+Factorial of 5 is: 120
+'''
+# 4- Task Remove from List
+def remove_from_list():
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    print("list :", my_list)
+    item_to_remove = input(" What you need to remove ? ")
+    
+    if item_to_remove in my_list:
+        my_list.remove(item_to_remove)
+        print(f"the item : {item_to_remove} removed :) .")
+    else:
+        print(f"the item :{item_to_remove} not in list :| .")
+    
+    print("final list:", my_list)
+
+remove_from_list()
+# output:) 
+'''
+list : ['Apple', 'Banana', 'Cherry', 'Data']
+ What you need to remove  ? Apple
+the item : Apple removed :) .
+final list: ['Banana', 'Cherry', 'Data']
+'''
+# output if the item not in list =) .
+'''
+list : ['Apple', 'Banana', 'Cherry', 'Data']
+ What you need to remove  ? betengan
+the item :betengan not in list :| .
+final list: ['Apple', 'Banana', 'Cherry', 'Data']
+'''
