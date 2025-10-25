@@ -1,0 +1,22 @@
+# Task_4
+
+def remove_from_list():
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    item_to_remove = input("Enter an item to remove: ")
+    if item_to_remove in my_list:
+        my_list.remove(item_to_remove)
+        print(f"Item '{item_to_remove}' removed successfully.")
+    else:
+        print(f"Item '{item_to_remove}' was not found.")
+    print("Updated list:", my_list)
+
+---------------------------------------------------------------------------
+
+# Task_5
+
+def calculate_factorial():
+    N = int(input("Enter a positive integer N: "))
+    result = 1
+    for i in range(1, N + 1):
+        result *= i
+    print("The factorial value is:", result)
