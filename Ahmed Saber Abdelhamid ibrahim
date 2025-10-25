@@ -1,0 +1,66 @@
+# احمد صابر عبدالحميد ابراهيم سالم
+Task 5
+def calculate_factorial():
+    """
+    تحسب مضروب عدد صحيح موجب N.
+    تستخدم حلقة for للتكرار والضرب من 1 حتى N.
+    """
+    # 1. طلب إدخال العدد N مع التحقق الأساسي من أنه عدد صحيح موجب
+    while True:
+        try:
+            N = int(input("أدخل عدد صحيح موجب N لحساب مضروبه: "))
+            if N < 0:
+                print("يجب أن يكون العدد موجبًا (أو صفر). حاول مرة أخرى.")
+                continue
+            break
+        except ValueError:
+            print("إدخال غير صالح. الرجاء إدخال عدد صحيح.")
+
+    # 2. تهيئة المتغير الأولي للنتيجة
+    result = 1
+
+    # حالة خاصة: مضروب الصفر هو 1
+    if N == 0:
+        print(f"مضروب العدد 0 هو: 1")
+        return
+
+    # 3. استخدام حلقة for للتكرار من 1 حتى N
+    # range(1, N + 1) تعطي الأعداد من 1 وصولاً إلى N
+    for i in range(1, N + 1):
+        # 4. داخل الحلقة، ضرب النتيجة الحالية في العدد الحالي
+        result = result * i
+
+    # 5. طباعة القيمة النهائية
+    print(f"\nمضروب العدد {N} هو: {result}")
+
+# استدعاء الدالة لتشغيلها
+calculate_factorial()
+
+
+
+
+
+
+Task 4
+def remove_from_list():
+    # تعريف الليست بالأسماء
+    my_list = ['Ahmed', 'Saber', 'AbdulHamid', 'ibrahim', 'Salem']
+
+    # عرض القائمة الأصلية
+    print("Current list:", my_list)
+
+    # طلب إدخال الاسم اللي المستخدم عايز يشيله
+    item = input("Enter the name you want to remove: ")
+
+    # التحقق هل الاسم موجود في القائمة
+    if item in my_list:
+        my_list.remove(item)  # حذف الاسم
+        print(f"'{item}' has been removed successfully")
+    else:
+        print(f"'{item}' was not found in the list")
+
+    # عرض القائمة بعد التحديث
+    print("Updated list:", my_list)
+
+# استدعاء الدالة للتنفيذ
+remove_from_list()
