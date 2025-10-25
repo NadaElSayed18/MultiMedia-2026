@@ -1,0 +1,37 @@
+#Task 4
+
+def remove_from_list():
+    # Create a list with 4 items
+    My_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    
+    # Ask the user to enter the item to remove
+    item = input("Enter the item you want to remove: ")
+
+    # Check if the item is in the list
+    if item in My_list:
+        # Remove the item from the list
+        My_list.remove(item)
+        # Print a message that the item was removed
+        print(f"{item} was removed successfully.")
+    else:
+        # Print a message if the item is not found
+        print(f"{item} was not found in the list.")
+
+    # Print the list after removing the item
+    print("Updated list:", My_list)
+
+#Task 5
+
+def calculate_factorial():
+    # Ask the user to enter a positive number
+    N = int(input("Enter a positive integer: "))
+    
+    # Start the result with 1 (because factorial of 0 is 1)
+    result = 1
+
+    # Use a loop to multiply numbers from 1 to N
+    for i in range(1, N + 1):
+        result *= i  # Multiply current number with result
+
+    # Print the final factorial value
+    print("Factorial is:", result)
