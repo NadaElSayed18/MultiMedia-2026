@@ -1,0 +1,36 @@
+
+def remove_from_list():
+    # تعريف الليست اللي فيها العناصر
+    My_list = ['Apple', 'Banana', 'Cherry', 'Data']
+
+    # المستخدم يدخل العنصر اللي عايز يحذفه
+    item = input("Enter the item you want to remove: ")
+
+    # التحقق إذا كان العنصر موجود في الليست
+    if item in My_list:
+        My_list.remove(item)  # حذف العنصر من الليست
+        print(f"{item} removed successfully.")  # طباعة رسالة نجاح الحذف
+    else:
+        print(f"{item} not found in the list.")  # طباعة رسالة أن العنصر مش موجود
+
+    # طباعة الليست بعد التحديث
+    print("Updated list:", My_list)
+
+
+def calculate_factorial():
+    # بنعرف دالة اسمها calculate_factorial
+
+    n = int(input("Enter a positive integer: "))
+    # بنطلب من المستخدم يدخل عدد صحيح موجب وبنخزنه في المتغير n
+
+    result = 1
+    # بنبدأ المتغير result   (و 0! = 1)
+
+    for i in range(1, n + 1):
+        # بنستخدم for loop تبدأ من 1 لحد n (n + 1 عشان الحد الأعلى مش بيتحسب في range)
+
+        result *= i
+        #  ،وده بيحسب الفاكتوريال 
+
+    print("The factorial is:", result)
+  بنطبع الناتج النهائي للفاكتوريال #
