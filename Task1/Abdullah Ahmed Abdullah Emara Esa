@@ -1,0 +1,31 @@
+#task 4
+n = int(input("Enter a positive number: ")) #inputs
+
+def calculate_factorial(): #function definition
+    result = 1
+    # Loop from 1 to the user's number
+    for i in range(1, n + 1):
+        result *= i # Multiply result by the current number
+    
+    print(f"The factorial of {n} is: {result}") # Display the result
+
+# Call the function to run it
+calculate_factorial()
+
+#################################################################################
+
+#task 5
+my_list = ['Apple', 'Banana', 'Cherry', 'Data'] #list of items
+item_to_remove = input("Enter an item to remove: ") #delete func
+
+def remove_item():
+    if item_to_remove in my_list:   #check if item exists
+        my_list.remove(item_to_remove) #remove item
+        print(f"'{item_to_remove}' was removed.") #confirmation
+    else:
+        print(f"'{item_to_remove}' was not found.")#not found message
+    
+    print(f"Final list: {my_list}")     #final list display
+
+
+remove_item()
