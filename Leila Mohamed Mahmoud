@@ -1,0 +1,30 @@
+#Task4
+def remove_from_list():
+    # Initialize the list with given items
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    # Prompt user to enter an item to remove
+    item_to_remove = input("Enter an item to remove: ")
+    # Check if the item exists in the list
+    if item_to_remove in my_list:
+        # Remove the item if found and print success message
+        my_list.remove(item_to_remove)
+        print(f"Item '{item_to_remove}' removed successfully.")
+    else:
+        # Print message if item is not found
+        print(f"Item '{item_to_remove}' was not found.")
+    # Display the updated list
+    print("Updated list:", my_list)
+
+
+
+#Task5
+def calculate_factorial():
+    # Prompt user to enter a positive integer and convert to integer
+    n = int(input("Enter a positive integer N: "))
+    # Initialize result variable to 1
+    result = 1
+    # Iterate from 1 to n (inclusive) to calculate factorial
+    for i in range(1, n + 1):
+        result *= i
+    # Print the final factorial value
+    print("The factorial value is:", result)
