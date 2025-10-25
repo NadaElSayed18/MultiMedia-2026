@@ -1,0 +1,46 @@
+#رضوي قتحي مندور
+#task 5
+def calculate_factorial():
+    # هنا يدخل رقم
+    num = int(input("Enter a number: "))
+    # يبدأ الناتج بواحد
+    fact = 1
+
+    # لو الرقم صفر
+    if num == 0:
+        fact = 1
+    # انفاكتوريال بتاعنا دايما واحد
+    else:
+        # يشتغل من 1 لحد الرقم اللي انا دخلته
+        for i in range(1, num + 1):
+            # يضرب كل رقم في اللي بعده
+            fact = fact * i
+
+    print("Factorial = ", fact)
+
+calculate_factorial()
+
+#task 4
+def remove_from_list():
+    # عملت هنا دالة بتشيل عنصر من ليست
+    lst = ['Apple', 'Cherry', 'Banana', 'Data']
+    # عملنا ليست فيها شوية عناصر
+    x = input("Item to remove: ")
+    # المستخدم يكتب العنصر اللي عايز يشيله
+
+    if x in lst:
+        # لو العنصر موجود
+        lst.remove(x)
+        # نشيله من الليست
+        print("Done!")
+        # نطبع إنه اتشال
+    else:
+        # لو مش موجود
+        print("Not found!")
+        # نقوله مش لاقيه 
+    
+    print(lst)
+    # نطبع الليست بعد التعديل
+
+# نشغل الدالة
+remove_from_list()
