@@ -1,0 +1,43 @@
+def remove_from_list():
+    # تعريف قائمة تحتوي على 4 عناصر نصية
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+
+    # طباعة القائمة الحالية للمستخدم
+    print("Current list:", my_list)
+
+    # طلب إدخال العنصر الذي يريد المستخدم إزالته
+    item = input("Enter the item you want to remove: ")
+
+    # التحقق إذا كان العنصر موجود داخل القائمة
+    if item in my_list:
+        # إزالة العنصر من القائمة
+        my_list.remove(item)
+        # طباعة رسالة نجاح
+        print(f"{item} تم حذفه بنجاح!")
+    else:
+        # طباعة رسالة في حال لم يتم العثور على العنصر
+        print(f"{item} غير موجود في القائمة.")
+
+    # طباعة القائمة بعد التحديث (بعد الإزالة أو بدونها)
+    print("Updated list:", my_list)
+
+#  استدعاء الدالة لتشغيلها
+remove_from_list()
+.................................................
+def calculate_factorial():
+    # طلب إدخال عدد صحيح موجب من المستخدم
+    n = int(input("Enter a positive integer: "))
+
+    # تهيئة متغير النتيجة بقيمة 1 (لأن الضرب في 1 لا يغيّر الناتج)
+    result = 1
+
+    # استخدام حلقة for لتكرار الضرب من 1 حتى N
+    for i in range(1, n + 1):
+        # ضرب النتيجة الحالية في الرقم الحالي
+        result *= i  # نفس المعنى: result = result * i
+
+    # طباعة الناتج النهائي بعد انتهاء الحلقة
+    print(f"مضروب العدد {n} هو {result}")
+
+#   استدعاء الدالة لتشغيلها
+calculate_factorial()
