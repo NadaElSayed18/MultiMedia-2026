@@ -1,0 +1,54 @@
+#Task 4
+# تعريف دالة تقوم بإزالة عنصر من قائمة بعد التأكد من وجوده
+def remove_from_list():
+    # إنشاء قائمة تحتوي على 4 عناصر نصية
+    my_list = ['Apple', 'Banana', 'Cherry', 'Date']
+    # طباعة محتوى القائمة الأصلية
+    print("Original list:", my_list)
+    
+    # طلب إدخال العنصر المراد إزالته من المستخدم
+    item_to_remove = input("Enter the item you want to remove: ")
+    
+    # التحقق هل العنصر موجود داخل القائمة
+    if item_to_remove in my_list:
+        # إذا العنصر موجود هيتم إزالته من القائمة
+        my_list.remove(item_to_remove)
+        # طباعة رسالة نجاح الإزالة
+        print(f"'{item_to_remove}' has been successfully removed from the list.")
+    else:
+        # طباعة رسالة عند عدم وجود العنصر
+        print(f"'{item_to_remove}' was not found in the list.")
+    
+    # طباعة القائمة بعد التعديل
+    print("Updated list:", my_list)
+
+# استدعاء الدالة للتنفيذ
+remove_from_list()
+###############################
+
+#Tadk 5
+# دالة تقوم بحساب المضروب (Factorial) لعدد موجب
+def calculate_factorial():
+    # طلب رقم من المستخدم وتحويله لعدد صحيح
+    N = int(input("Enter a positive integer N: "))
+    
+    # التحقق إن الرقم سالب ولا لأ
+    if N < 0:
+        print("Error: Factorial is not defined for negative numbers!")
+        return
+    
+    # تهيئة نتيجة المضروب ببداية 1
+    result = 1
+    
+    # حلقة من 1 لحد الرقم المدخل
+    for i in range(1, N + 1):
+        # ضرب القيمة الحالية في النتيجة المتراكمة
+        result = result * i
+    
+    # طباعة النتيجة النهائية
+    print(f"The factorial of {N} is: {result}")
+
+# استدعاء الدالة للتنفيذ
+calculate_factorial()
+
+
