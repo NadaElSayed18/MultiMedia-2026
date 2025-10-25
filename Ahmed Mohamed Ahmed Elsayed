@@ -1,0 +1,57 @@
+#Task 4
+def remove_from_list():
+    # قائمة الفواكه الموجودة
+    fruits = ['Apple', 'Banana', 'Cherry', 'Date']
+    # عرض القائمة الحالية للمستخدم
+    print("Current fruits list:", fruits)
+    while True:
+        # طلب اسم الفاكهة المراد حذفها من المستخدم
+        remove_this = input("Which fruit do you want to remove? ").strip()
+        # التحقق من وجود الفاكهة في القائمة
+        if remove_this in fruits:
+            # حذف الفاكهة من القائمة لو موجودة
+            fruits.remove(remove_this)
+            print(f"{remove_this} has been removed successfully ")
+            break
+        else:
+            # رسالة خطأ إذا كانت الفاكهة غير موجودة
+            print(f" {remove_this} is not in the list. Try again!")
+    # عرض القائمة بعد التحديث
+    print("Updated fruits list:", fruits)
+# تشغيل الدالة
+remove_from_list()
+
+
+
+
+###########################################################################
+#Task 5
+# دالة تقوم بحساب المضروب (Factorial) لعدد موجب
+def calculate_factorial():
+    # طلب رقم من المستخدم وتحويله لعدد صحيح
+    N = int(input("Enter a positive integer N: "))
+    
+    # التحقق إن الرقم سالب ولا لأ
+    if N < 0:
+        print("Error: Factorial is not defined for negative numbers!")
+        return
+    
+    # تهيئة نتيجة المضروب ببداية 1
+    result = 1
+    
+    # حلقة من 1 لحد الرقم المدخل
+    for i in range(1, N + 1):
+        # ضرب القيمة الحالية في النتيجة المتراكمة
+        result = result * i
+    
+    # طباعة النتيجة النهائية
+    print(f"The factorial of {N} is: {result}")
+
+# استدعاء الدالة للتنفيذ
+calculate_factorial()
+
+
+
+
+
+
