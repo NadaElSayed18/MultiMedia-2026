@@ -1,0 +1,48 @@
+def calculate_factorial():  
+    # تعريف دالة
+
+    N = int(input("Enter a positive integer: "))  
+    # يطلب من المستخدم إدخال عدد صحيح موجب ويخزنه في المتغير N
+
+    result = 1  
+    # متغير باسم result بالقيمة 1 (لأن 1 بداية الضرب)
+
+    for i in range(1, N + 1):  
+        # حلقة تكرار تبدأ من 1 وتنتهي عند N
+        
+        result = result * i  
+        # في كل دورة، نضرب القيمة الحالية لـ result في رقم i الحالي
+
+    print("The factorial of", N, "is:", result)  
+    # نطبع الناتج النهائي 
+
+calculate_factorial()  
+# استدعاء الدالة
+
+###################################################################
+
+def remove_from_list():
+    # تعريف دالة
+
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    # إنشاء قائمة تحتوي على أربعة عناصر 
+
+    item = input("Enter the item you want to remove: ")
+    # يطلب من المستخدم إدخال العنصر الذي يريد حذفه من القائمة
+
+    if item in my_list:
+        # إذا كان العنصر موجود داخل القائمة
+
+        my_list.remove(item)
+        # إذا كان موجود، نحذفه من القائمة
+
+        print(f"{item} has been removed successfully.")
+        # طباعة رسالة نجاح توضح أن العنصر تم حذفه
+    else:
+        print(f"{item} was not found in the list.")
+
+    print("Updated list:", my_list)
+    # طباعة القائمة بعد التحديث 
+
+remove_from_list()
+# استدعاء الدالة
