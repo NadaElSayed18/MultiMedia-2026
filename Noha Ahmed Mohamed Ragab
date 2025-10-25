@@ -1,0 +1,63 @@
+(4)
+# تعريف دالة باسم remove_from_list لا تأخذ أي وسائط
+def remove_from_list():
+    # تعريف قائمة (list) تحتوي على أربعة عناصر نصية (strings)
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    # طباعة القائمة الأصلية لمساعدة المستخدم في إدخال العنصر
+    print(f"The current list is: {my_list}")
+
+    # مطالبة المستخدم بإدخال العنصر الذي يريد حذفه وتخزينه في متغير item_to_remove
+    item_to_remove = input("Enter the item you want to remove: ")
+
+    # استخدام عبارة if للتحقق مما إذا كان العنصر المدخل موجوداً في القائمة my_list
+    if item_to_remove in my_list:
+        # إذا كان العنصر موجوداً، يتم حذفه من القائمة باستخدام الدالة remove()
+        my_list.remove(item_to_remove)
+        # طباعة رسالة نجاح توضح أن العنصر تم حذفه
+        print(f"Success! '{item_to_remove}' has been removed from the list.")
+    # استخدام عبارة else لتنفيذ كتلة الكود إذا كان شرط if خاطئاً (أي العنصر غير موجود)
+    else:
+        # طباعة رسالة توضح أن العنصر الذي أدخله المستخدم لم يتم العثور عليه في القائمة
+        print(f"Item not found. '{item_to_remove}' is not in the list.")
+
+    # طباعة القائمة النهائية المحدثة بعد عملية الإزالة (أو عدمها)
+    print(f"The final update list is: {my_list}")
+
+# استدعاء الدالة لتشغيلها وتنفيذ التعليمات بداخلها
+remove_from_list()
+
+(5)
+
+# تعريف دالة باسم calculate_factorial لا تأخذ أي وسائط
+def calculate_factorial():
+    # البدء بحلقة while لضمان مطالبة المستخدم بإدخال عدد صحيح موجب
+    while True:
+        try:
+            # مطالبة المستخدم بإدخال عدد صحيح موجب (N) وتحويل المدخل إلى عدد صحيح (integer)
+            N = int(input("Enter a positive integer N to calculate its factorial: "))
+            # التحقق من أن العدد المُدخل موجب (أكبر من أو يساوي صفر)
+            if N >= 0:
+                # إذا كان العدد صحيحاً وموجباً (أو صفر)، نكسر الحلقة
+                break
+            else:
+                # إذا كان العدد سالباً، نطبع رسالة خطأ ونعيد مطالبته بالإدخال
+                print("Please enter a positive integer (N >= 0).")
+        except ValueError:
+            # معالجة الخطأ إذا لم يقم المستخدم بإدخال قيمة يمكن تحويلها إلى عدد صحيح
+            print("Invalid input. Please enter a whole number.")
+
+    # تهيئة متغير باسم result وتعيين القيمة الأولية له بـ 1. هذا المتغير سيخزن ناتج العاملي.
+    result = 1
+
+    # استخدام حلقة for للتكرار من 1 وحتى N (شاملة)
+    # الدالة range(1, N + 1) تولد تسلسلاً من الأرقام: 1, 2, 3, ..., N
+    for number in range(1, N + 1):
+        # في كل تكرار، نضرب القيمة الحالية لـ result في رقم التكرار الحالي (number)
+        # (result = result * number)
+        result *= number
+        
+    # طباعة النتيجة النهائية لعاملي العدد N
+    print(f"The factorial of {N} ({N}!) is: {result}")
+
+# استدعاء الدالة لتشغيلها وحساب العاملي
+calculate_factorial()
