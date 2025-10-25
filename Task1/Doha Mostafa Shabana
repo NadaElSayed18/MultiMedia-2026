@@ -1,0 +1,44 @@
+#Task 4
+def calculate_factorial():
+    # Prompt the user to enter a positive integer
+    num = int(input("Enter a positive integer: "))
+
+    # Initialize factorial variable
+    factorial = 1
+
+    # Check if num is a positive integer
+    if num < 0:
+        print("Factorial is not defined for negative numbers.")
+        return
+
+    # Use for loop to calculate factorial
+    for i in range(1, num + 1):
+        factorial *= i
+
+    # Print the final factorial value
+    print(f"The factorial of {num} is {factorial}")
+
+calculate_factorial()
+###################################################################
+#Task 5
+def remove_from_list():
+    # Define a list with four string items
+    fruits = ['Apple', 'Banana', 'Cherry', 'Data']
+    
+    # Display the original list
+    print("Current list:", fruits)
+    
+    # Prompt the user to enter the item they want to remove
+    to_remove = input("Enter the item you want to remove: ")
+    
+    # Check if the item is in the list
+    if to_remove in fruits:
+        fruits.remove(to_remove)
+        print(f"{to_remove} has been removed successfully.")
+    else:
+        print(f"{to_remove} was not found in the list.")
+    
+    # Print the final updated list
+    print("Updated list:", fruits)
+
+remove_from_list()
