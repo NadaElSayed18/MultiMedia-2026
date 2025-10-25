@@ -1,10 +1,27 @@
+#Function definition
 def remove_from_list():
-    My_list = ['Apple', 'Banana', 'Cherry', 'Data']
-    input_User = input("Enter the item they want to remove: ")
+    My_list = ['Apple', 'Banana', 'Cherry', 'Data'] #Array
+    input_User = input("Enter the item they want to remove: ") #The user enter the item he wants to remove
     if input_User in My_list:
+        #Here is a condition: if the user enters an item that exists in the array, the item will be remove from the array
         My_list.remove(input_User)
-    else:
-        print("the item was not found")
-    print(My_list)
+    else: 
+        #Here, if the user enters an item that does not exist, the array will remain as it is
+        print("the item was not found") #Prints a message the item was not found
+    print(My_list) #Print the array
 
-remove_from_list()
+remove_from_list() #Call Function
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+#Function definition 
+def calculate_factorial():
+    #we make the user enter the number
+    inputUser = int(input("Enter a positive integer N: "))
+    #result variable 
+    result = 1
+    for i in range(1,inputUser + 1): #i starts from 1 to the number entered by the user plus one
+        result *= i #The result of the factorial 
+    print (f"Number factorial {inputUser} is: {result}") #Prints the number entered by the user and the result of the factorial
+
+calculate_factorial() #Call function
