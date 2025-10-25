@@ -1,0 +1,36 @@
+##Heba Ahmed
+##task 4
+
+
+def remove_from_list():
+## define a function    
+    mylist=["Apple","Banana","cherry","data"]
+    ## make a list with elements
+    removeditem=input("Enter the item you want to remove:")
+    ##make user to enter the element he want to remove
+    if removeditem in mylist:
+        mylist.remove (removeditem)
+        print(f"{removeditem} removed successfully")
+    else:
+        print(f"{removeditem} not found in mylist")
+    print(f"the final update list is:{mylist}")
+## look if the element in list or not and print success if it exist 
+remove_from_list()
+## calling the function
+
+
+
+##Task 5
+def calculate_factorial():
+ ## define a function
+    N=int(input("Enter a positive integer"))
+     ##make user to enter positive integer
+    result=1
+    ##define variable with initial value equal 1
+    for i in range(1,N+1):
+        result=result*i
+  ##use loop start from 1 to N وكل مره بنضرب فى النتيجه السابقه
+    print(f"The factorial of{N}is:{result}")
+    ## print final result
+calculate_factorial()     
+## calling the function   
