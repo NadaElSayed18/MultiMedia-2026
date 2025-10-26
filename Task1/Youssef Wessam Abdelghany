@@ -1,0 +1,29 @@
+n = int(input("Enter a positive integer: "))
+# ندخل رقم موجب و نحوله من string ل int
+result = 1
+#نعمل متغير result و نخليه ب 1
+for i in range(1, n + 1):
+#نستخدم for loop
+result = result * i
+# ف كل لفة نضرب النتيجة الحالية في  i
+print("The factorial of", n, "is:", result)
+#نطبع النتائج
+task-5
+-----------------------------------------------------------------------------------------------------------------------------
+my_list = ["Minecraft", "Fifa", "GTA", "Pupg"]
+# نعرف  قائمة list فيها اربع عناصر
+item = input("Enter the item you want to remove: ")
+# نطلب من المستخدم يدخل اسم العنصر الي عايز يشيله
+if item in my_list:   
+#نستخدمة if  لنتأكد اذا كان العنصر الي المستخدم كتبه موجود ولا لا
+my_list.remove(item)
+#لو العنصر موجود نشيله باستخدام دالة remove()
+print(item, "has been removed successfully.")
+#نطبع رسالة تأكيد أن العنصر اتمسح
+else:
+# لو العنصر مش موجود في القايمة
+print(item, "was not found in the list.")
+#نطبع رسالة ان العنصر مش موجود
+print("Updated list:", my_list)
+#نطبع القايمة بعد التغييرات
+task-4
