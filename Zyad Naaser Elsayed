@@ -1,0 +1,17 @@
+def calculate_factorial():
+    # هنا بعمل دالة اسمها calculate_factorial
+
+    n = int(input("Enter a positive integer: "))
+    # بطلب من المستخدم يدخل رقم صحيح موجب
+
+    result = 1
+    # ببدأ متغير اسمه result بقيمة 1 (لأن 0! بيساوي 1)
+
+    for i in range(1, n + 1):
+        # بعمل حلقة for تمشي من 1 لحد الرقم اللي المستخدم كتبه
+
+        result *= i
+        # في كل مرة بضرب الرقم الحالي في النتيجة اللي قبلها
+
+    print(f"The factorial of {n} is {result}")
+    # وفي الآخر بطبع الناتج اللي هو العامل (factorial)
