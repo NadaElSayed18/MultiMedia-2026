@@ -1,0 +1,11 @@
+def calculate_factorial(): # function definition
+    n = int(input("enter a positive number:")) # ask user to input a number
+    if n < 1 :  # check if the factorial is positive
+        print("error") # print error if the factorial is negative
+    return # don't continue the code if the factorial is negative
+    result = 1 #initialize a variable
+    for current_number in range (1,n+1): # for loop start with 1 and end with n+1
+        result = result*current_number  #clculate the new value for the variable (the value of factorial)
+    print(f"the final factorial result is:{result}") # print the value of the factorial
+    
+    calculate_factorial()  #function calling
