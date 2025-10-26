@@ -1,0 +1,26 @@
+def remove_from_list():
+    # هنا بعمل دالة اسمها remove_from_list
+
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
+    # عملت قايمة فيها 4 عناصر
+
+    item = input("Enter the item you want to remove: ")
+    # بطلب من المستخدم يكتب اسم العنصر اللي عايز يشيله
+
+    if item in my_list:
+        # هنا بشوف هل العنصر اللي كتبه المستخدم موجود في القايمة ولا لأ
+
+        my_list.remove(item)
+        # لو العنصر موجود، هشيله من القايمة
+
+        print(f"{item} has been removed successfully.")
+        # وبطبعله رسالة إن العنصر اتشال بنجاح
+
+    else:
+        # لو العنصر مش موجود في القايمة
+
+        print(f"{item} was not found in the list.")
+        # بطبعله رسالة إن العنصر مش موجود
+
+    print("Updated list:", my_list)
+    # وفي الآخر بطبع القايمة بعد التعديل
