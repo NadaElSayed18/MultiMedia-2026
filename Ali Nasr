@@ -1,0 +1,11 @@
+my_list= ['ahmed','mohamed','ali','mahmoud','hassan'] #list creation
+
+def remove_from_list(my_list): #function definition
+    item_to_remove = input("enter the name you want to remove:") #ask the user to input an item to remove from the list and put it into a variable
+    if item_to_remove in my_list :  # chek if the item the user has added is in the list
+        my_list.remove(item_to_remove) # if the condition is true remove it form the list
+        print(f"the new array is:{my_list}") # print the new list after the omission
+    else : # if the condition is false
+        print("the name you entered is not exist") # print "the name you entered is not exist"
+    
+    remove_from_list(my_list) #function calling
