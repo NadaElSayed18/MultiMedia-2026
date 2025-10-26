@@ -1,0 +1,29 @@
+#           Khaled Mohamed Mohamed Elsaeed   section (7)
+
+def remove_from_list():   # name of function
+    my_list = ["Apple", "Banana", "Cherry", "Data"]   # four string items
+    
+    item = input("Enter the item you want to remove: ")   # the item want to remove
+    
+    if item in my_list:  # to check item
+        my_list.remove(item)   # if you found remove it
+        print(f"{item} has been removed.")  
+
+    else:   # else print that not found
+        print(f"{item} was not found.")  
+    
+    print("Updated list:", my_list) 
+    remove_from_list()
+
+########################################################
+
+def calculate_factorial():   # name of function
+    N = int(input("enter a positive integer : "))   # enter the number 
+
+    result = 1
+
+    for i in range(1, N + 1):
+        result *= i
+ 
+    print(f"The factorial of {N} is {result}")
+    calculate_factorial()
