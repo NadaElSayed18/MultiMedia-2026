@@ -1,0 +1,49 @@
+def remove_from_list():  
+    # تعريف دالة اسمها remove_from_list (وظيفتها إزالة عنصر من قائمة)
+    
+    My_list = ["Apple", "Banana", "Cherry", "Data"]
+    # تعريف قائمة فيها 4 عناصر (قيم نصية)
+    
+    item = input("Enter the item you want to remove: ")
+    # طلب إدخال من المستخدم للعنصر اللي عايز يشيله من القائمة
+    
+    if item in My_list:
+        # فحص إذا كان العنصر المدخل موجود فعلاً في القائمة
+        
+        My_list.remove(item)
+        # إزالة العنصر من القائمة
+        
+        print(f"{item} was removed successfully.")
+        # طباعة رسالة نجاح تفيد إن العنصر تم إزالته بنجاح
+    
+    else:
+        # حالة لو العنصر مش موجود في القائمة
+        
+        print(f"{item} was not found in the list.")
+        # طباعة رسالة بتوضح إن العنصر مش موجود
+    
+    print("Updated list:", My_list)
+    # طباعة القائمة بعد التحديث (سواء اتشال منها عنصر أو لا)
+
+# استدعاء الدالة لتشتغل
+remove_from_list()
+
+
+
+def calculate_factorial():
+    # تعريف دالة اسمها calculate_factorial (مهمتها حساب الفاكتوريال لأي رقم موجب)
+    
+    N = int(input("Enter a positive integer: "))
+    # طلب إدخال رقم صحيح موجب من المستخدم وتحويله لنوع int
+    
+    result = 1
+    # تهيئة متغير اسمه result بقيمة 1 (لأن 1 هو قيمة البداية في عملية الضرب)
+    
+    for i in range(1, N + 1):
+        # إنشاء حلقة for تبدأ من 1 وتنتهي عند N (شاملة N)
+        
+        result = result * i
+        # في كل دورة من الحلقة، بيضرب الرقم الحالي i في النتيجة السابقة
+        
+    print(f"The factorial of {N} is: {result}")
+    # بعد انتهاء الحلقة، طباعة النتيجة النهائية وهي قيمة الفاكتوريال
