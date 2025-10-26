@@ -1,0 +1,32 @@
+# task 4
+def remove_from_list():
+    # تعريف ليست فيها 4 عناصر
+    items = ["اhaneen", "asmaa", "sarah", "nada"]
+ # عرض الليست الحالية للمستخدم
+    print("the list:", items)
+ # طلب إدخال العنصر الذي يريد المستخدم حذفه
+    item_to_remove = input("Enter the item you want to remove: ")
+# معرفة إذا كان العنصر موجود في الليست
+    if item_to_remove in items:
+        items.remove(item_to_remove)  # إزالة العنصر
+        print(f"{item_to_remove} has been removed successfully")
+    else:
+        print(f"{item_to_remove} was not found in the list")
+# طباعة الليست بعد التحديث
+    print("Updated list:", items)
+# استدعاء الدالة لتعمل
+remove_from_list()
+______________________________________________________________________________________________________________________
+# task 5
+def calculate_factorial():
+    # طلب إدخال عدد صحيح موجب من المستخدم
+    n = int(input("Enter a positive integer: "))
+ # تهيئة متغير النتيجة بقيمة 1
+    result = 1
+ # ااستخدام for loop لحساب العامل المضان
+    for i in range(1, n + 1):
+        result = result * i
+ # طباعة الناتج النهائي
+    print(f"The factorial of {n} is: {result}")
+# استدعاء الدالة 
+calculate_factorial()
