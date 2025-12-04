@@ -1,0 +1,46 @@
+import tkinter as tk
+import math  # جزء من الخارج: استخدمت math.pow للقوة 2، وأفهم أنها تحسب الأس (power) بدلاً من **
+
+def calculate_bmi():
+    try:
+        weight = float(weight_entry.get())
+        height = float(height_entry.get())
+        if height <= 0 or weight <= 0:
+            result_label.config(text="أدخل قيم صحيحة (أكبر من صفر)")
+            return
+        # حساب BMI: weight / (height^2)
+        bmi = weight / math.pow(height, 2)  # هنا الجزء من الخارج: math.pow للقوة 2
+        if bmi < 18.5:
+            category = "نحيف"
+        elif 18.5 <= bmi < 24.9:
+            category = "طبيعي"
+        elif 25 <= bmi < 29.9:
+            category = "زائد الوزن"
+        else:
+            category = "سمنة"
+        result_label.config(text=f"BMI: {bmi:.2f} - {category}")
+    except ValueError:
+        result_label.config(text="أدخل أرقام صحيحة")
+
+# إنشاء النافذة الرئيسية
+root = tk.Tk()
+root.title("حاسبة BMI")
+root.geometry("300x200")
+
+# عناصر الواجهة
+tk.Label(root, text="الوزن (كجم):").pack()
+weight_entry = tk.Entry(root)
+weight_entry.pack()
+
+tk.Label(root, text="الطول (متر):").pack()
+height_entry = tk.Entry(root)
+height_entry.pack()
+
+calculate_button = tk.Button(root, text="احسب BMI", command=calculate_bmi)
+calculate_button.pack()
+
+result_label = tk.Label(root, text="")
+result_label.pack()
+
+# تشغيل الحلقة الرئيسية
+root.mainloop()
